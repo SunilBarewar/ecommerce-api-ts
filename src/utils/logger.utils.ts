@@ -6,4 +6,7 @@ const logger = pino({
   },
 });
 
+export const errorLogger = (err: any) => {
+  logger.error(err.message);
+};
 export default logger;
