@@ -1,5 +1,6 @@
 import { Schema, model } from "mongoose";
 import bcrypt from "bcrypt";
+import uniqueValidator from "mongoose-unique-validator";
 
 export interface IUser {
   name: string;
@@ -7,7 +8,6 @@ export interface IUser {
   password: string;
   role: "admin" | "customer" | "vendor";
 }
-
 const UserSchema = new Schema<IUser>({
   name: {
     type: String,
@@ -28,6 +28,8 @@ const UserSchema = new Schema<IUser>({
     default: "customer",
   },
 });
+
+UserSchema.plugin(uniqueValidator);
 
 UserSchema.pre("save", async function (next) {
   if (!this.isModified("password")) {

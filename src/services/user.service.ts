@@ -6,10 +6,11 @@ export const createUser = async (userData: CreateUserDto["body"]) => {
   try {
     let user = await UserModel.create(userData);
     await user.save();
-    const{password,...rest} =  user.toJSON();
+    const { password, ...rest } = user.toJSON();
     return rest;
   } catch (error: any) {
     errorLogger(error);
+    throw new Error("Email already exists");
   }
 };
 
@@ -20,15 +21,16 @@ export const getUser = async (id: string) => {
     return user?.toJSON();
   } catch (error: any) {
     errorLogger(error);
+    throw new Error("user does not exists");
   }
 };
 
 export const updateUser = async (id: string, data: UpdateUserDto["body"]) => {
   try {
-    console.log(data);
     return await UserModel.findByIdAndUpdate(id, data);
   } catch (error: any) {
     errorLogger(error);
+    throw new Error("user does not exists");
   }
 };
 
@@ -37,6 +39,7 @@ export const removeUser = async (id: string) => {
     return await UserModel.findByIdAndDelete(id);
   } catch (error: any) {
     errorLogger(error);
+    throw new Error("user does not exists");
   }
 };
 
