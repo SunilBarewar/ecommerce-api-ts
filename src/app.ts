@@ -15,7 +15,7 @@ app.use(cookieParser());
 
 app.use(cors());
 
-app.get("/health-check", (req, res) => {
+app.get("/", (req, res) => {
   res.status(200).json({ message: "server started" });
 });
 
