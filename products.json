@@ -1,0 +1,57 @@
+[
+    {
+        "name": "APPLE iPhone 14 Pro (Silver, 1 TB)",
+        "desc": "1 TB ROM#15.49 cm (6.1 inch)#Super Retina XDR Display#48MP + 12MP + 12MP | 12MP Front Camera#A16 Bionic Chip, 6 Core Processor Processor",
+        "price": 169900,
+        "stock": 56,
+        "category": "phones",
+        "discount": 5,
+        "thumbnail": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/y/l/p/-original-imaghxemc3wtcuhb.jpeg?q=70",
+        "images": [
+            "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/y/l/p/-original-imaghxemc3wtcuhb.jpeg?q=70",
+            "https://rukminim2.flixcart.com/image/128/128/xif0q/mobile/s/p/d/-original-imaghxemhgfzjgja.jpeg?q=70",
+            "https://rukminim2.flixcart.com/image/128/128/xif0q/mobile/z/m/l/-original-imaghxejxzzzkqr7.jpeg?q=70",
+            "https://rukminim2.flixcart.com/image/128/128/xif0q/mobile/h/r/e/-original-imaghxeeme2n7hy7.jpeg?q=70",
+            "https://rukminim2.flixcart.com/image/128/128/xif0q/mobile/g/p/6/-original-imaghxem3utgrtyg.jpeg?q=70"
+        ]
+    },
+    {
+        "name": "",
+        "desc": "",
+        "price": 169900,
+        "stock": 56,
+        "category": "",
+        "discount": 5,
+        "thumbnail": "",
+        "images": []
+    },
+    {
+        "name": "MICROSOFT XBOX S/X Wireless Controller Gamepad",
+        "desc": "For Xbox One, Xbox Series X, Xbox Series S#Wireless#OS Supported: windows 10,Android#Operating Range: 9 m",
+        "price": 5299,
+        "stock": 12,
+        "category": "gaming",
+        "discount": 5,
+        "thumbnail": "https://rukminim2.flixcart.com/image/416/416/kn0n6a80/gamepad/t/d/6/qau-00013-microsoft-original-imagfsb8b4fxkyar.jpeg?q=70",
+        "images": [
+            "https://rukminim2.flixcart.com/image/416/416/kn0n6a80/gamepad/t/d/6/qau-00013-microsoft-original-imagfsb8b4fxkyar.jpeg?q=70",
+            "https://rukminim2.flixcart.com/image/128/128/kn0n6a80/gamepad/w/a/t/qau-00013-microsoft-original-imagfsb8mpbhsmcx.jpeg?q=70",
+            "https://rukminim2.flixcart.com/image/128/128/kn0n6a80/gamepad/s/v/g/qau-00013-microsoft-original-imagfsb8djfjrcst.jpeg?q=70"
+        ]
+    },
+    {
+        "name": "ViewSonic 27 inch Full HD IPS Panel with HDR10",
+        "desc": "Panel Type: IPS Panel#ScreenResolution Type: Full HD#Brightness: 250 nits##Response Time: 1 ms | Refresh Rate: 180 H",
+        "price": 11999,
+        "stock": 56,
+        "category": "gaming",
+        "discount": 5,
+        "thumbnail": "https://rukminim2.flixcart.com/image/128/128/xif0q/monitor/a/o/m/-original-imagwmfcbuhuw5ts.jpeg?q=70",
+        "images": [
+            "https://rukminim2.flixcart.com/image/128/128/xif0q/monitor/a/o/m/-original-imagwmfcbuhuw5ts.jpeg?q=70",
+            "https://rukminim2.flixcart.com/image/128/128/xif0q/monitor/e/z/2/-original-imagwmfckduyzpm2.jpeg?q=70",
+            "https://rukminim2.flixcart.com/image/128/128/xif0q/monitor/h/n/3/-original-imagwmfcuywzhpdk.jpeg?q=70"
+        ]
+    },
+    {}
+]
