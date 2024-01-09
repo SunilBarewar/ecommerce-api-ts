@@ -6,14 +6,24 @@ dotenv.config();
 import Routes from "./routes";
 import connectDB from "./utils/connectDB.utils";
 import logger from "./utils/logger.utils";
+import corsOptions from "./utils/corsOptions";
+import setHeaderCredentials from "./middleware/setHeaderCredentials.middleware";
 
 const app = express();
 
+// set acces control res headers
+app.use(setHeaderCredentials);
+
+// configure cors
+app.use(cors(corsOptions));
+
+// parse the req body
 app.use(express.json());
 
-app.use(cookieParser());
+app.use(express.urlencoded({ extended: false }));
 
-app.use(cors());
+//parse the cookies
+app.use(cookieParser());
 
 app.get("/", (req, res) => {
   res.status(200).json({ message: "server started" });

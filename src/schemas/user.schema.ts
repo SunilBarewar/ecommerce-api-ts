@@ -14,11 +14,13 @@ const body = z.object({
     .trim()
     .min(1, "Email cannot be empty")
     .email("Invalid email"),
-  role: z.enum(["admin", "customer", "vendor"], {
-    errorMap: (issue, ctx) => {
-      return { message: "Invalid role" };
-    },
-  }),
+  role: z
+    .enum(["admin", "customer", "vendor"], {
+      errorMap: (issue, ctx) => {
+        return { message: "Invalid role" };
+      },
+    })
+    .optional(),
 
   password: z
     .string({ required_error: "Password can't be empty" })
