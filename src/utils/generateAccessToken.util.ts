@@ -2,14 +2,14 @@ import jwt from "jsonwebtoken";
 const generateAccessToken = (userInfo: any) => {
   const accessToken = jwt.sign(
     {
-      UserInfo: {
+      userInfo: {
         id: userInfo._id,
-        name: userInfo.name,
         role: userInfo.role,
+        cartId: userInfo.cartId,
       },
     },
     process.env.ACCESS_TOKEN_SECRET as string,
-    { expiresIn: "15m" }
+    { expiresIn: "2d" }
   );
 
   return accessToken;

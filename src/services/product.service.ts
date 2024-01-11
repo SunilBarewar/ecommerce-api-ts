@@ -28,8 +28,8 @@ export const findAllProducts = async (query: FilterProductsDto["query"]) => {
     sort[sortBy] = sortOrder === "desc" ? -1 : 1;
   }
 
-  const products = await ProductModel.find(finalQuery).sort(sort);
-  return await ProductModel.find().limit(20);
+  const products = await ProductModel.find(finalQuery).sort(sort).limit(20);
+  return products;
 };
 
 export const findProduct = async (id: string) => {

@@ -1,8 +1,14 @@
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 
+interface IUserInfo {
+  id: string;
+  cartId: string;
+  role: string;
+}
+
 export interface AuthenticatedRequest extends Request {
-  user?: any;
+  user: IUserInfo;
 }
 const verifyJwtToken = (
   req: AuthenticatedRequest,
@@ -19,18 +25,15 @@ const verifyJwtToken = (
     }
 
     const [, token] = authToken.split(" ");
-
     jwt.verify(
       token,
       process.env.ACCESS_TOKEN_SECRET as string,
       (err, decoded: any) => {
         if (err) return res.status(403).json({ message: "Forbidden" });
         req.user = decoded.userInfo;
-        console.log(decoded);
         next();
       }
     );
-    next();
   } catch (error) {
     res.status(500).json({ error: "Internal Server Error" });
   }
