@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { Schema, Types, model } from "mongoose";
 import bcrypt from "bcrypt";
 import uniqueValidator from "mongoose-unique-validator";
 
@@ -7,6 +7,7 @@ export interface IUser {
   email: string;
   password: string;
   role: "admin" | "customer" | "vendor";
+  cartId: Types.ObjectId;
 }
 const UserSchema = new Schema<IUser>({
   name: {
@@ -22,6 +23,11 @@ const UserSchema = new Schema<IUser>({
   password: {
     type: String,
     required: true,
+  },
+  cartId: {
+    type: Schema.Types.ObjectId,
+    ref: "user",
+    index: true,
   },
   role: {
     type: String,

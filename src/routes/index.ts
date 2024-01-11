@@ -4,11 +4,13 @@ import usersRoutes from "./users.route";
 import productsRoutes from "./products.route";
 import reviewsRoutes from "./reviews.route";
 import ordersRoutes from "./orders.route";
+import cartRoutes from "./cart.route";
 
 const router = Router();
 
 router.use("/auth", authRoutes);
 router.use("/users", usersRoutes);
+router.use("/cart", cartRoutes);
 router.use("/products", productsRoutes);
 router.use("/orders", ordersRoutes);
 router.use("/reviews", reviewsRoutes);
