@@ -6,6 +6,7 @@ const generateAccessToken = (userInfo: any) => {
         id: userInfo._id,
         role: userInfo.role,
         cartId: userInfo.cartId,
+        email: userInfo.email,
       },
     },
     process.env.ACCESS_TOKEN_SECRET as string,

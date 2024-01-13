@@ -5,6 +5,7 @@ interface IUserInfo {
   id: string;
   cartId: string;
   role: string;
+  email: string;
 }
 
 export interface AuthenticatedRequest extends Request {
