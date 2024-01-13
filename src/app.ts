@@ -4,10 +4,10 @@ import cors from "cors";
 import dotenv from "dotenv";
 dotenv.config();
 import Routes from "./routes";
-import connectDB from "./utils/connectDB.utils";
 import logger from "./utils/logger.utils";
 import corsOptions from "./utils/corsOptions";
 import setHeaderCredentials from "./middleware/setHeaderCredentials.middleware";
+import mongoose from "mongoose";
 
 const app = express();
 
@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
 app.use("/api", Routes);
 
 async function bootstrap() {
-  await connectDB();
+  await mongoose.connect(process.env.MONGO_DB_URL as string);
   const port = process.env.PORT || 5000;
   app.listen(port, () => {
     logger.info("server running on port ", port);
