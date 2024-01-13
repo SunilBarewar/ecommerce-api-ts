@@ -31,7 +31,7 @@ export const createCheckoutSession = async (
       line_items: lineItems,
       customer_email: email,
       mode: "payment",
-      return_url: `http://localhost:5173/payment-status?session_id={CHECKOUT_SESSION_ID}&from=${from}`,
+      return_url: `${process.env.CLIENT_URL}/payment-status?session_id={CHECKOUT_SESSION_ID}&from=${from}`,
     });
 
     return res.status(200).json({ clientSecret: session.client_secret });
