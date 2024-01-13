@@ -40,7 +40,6 @@ function bootstrap() {
     return __awaiter(this, void 0, void 0, function* () {
         yield mongoose_1.default.connect(process.env.MONGO_DB_URL, {
             retryWrites: true,
-            w: "majority",
         });
         const port = process.env.PORT || 5000;
         app.listen(port, () => {

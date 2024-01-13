@@ -9,7 +9,7 @@ interface IUserInfo {
 }
 
 export interface AuthenticatedRequest extends Request {
-  user: IUserInfo;
+  user?: IUserInfo;
 }
 const verifyJwtToken = (
   req: AuthenticatedRequest,
