@@ -1,8 +1,9 @@
-import CartModel from "../models/cart.model";
+import CartModel, { cartItem } from "../models/cart.model";
 
 export const createCart = async () => {
+  let products: cartItem[] = [];
   const cartData = {
-    products: [],
+    products,
   };
   const cart = await CartModel.create(cartData);
   await cart.save();

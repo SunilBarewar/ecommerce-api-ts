@@ -1,6 +1,6 @@
 import { Schema, model, Types } from "mongoose";
 
-type cartItem = { productId: Types.ObjectId; quantity: number };
+export type cartItem = { productId: Types.ObjectId; quantity: number };
 
 interface Icart {
   products: [cartItem];
